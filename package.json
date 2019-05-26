@@ -19,9 +19,8 @@
   "scripts": {
     "build": "tsc -p ./src",
     "prestart": "npm run build",
-    "precommit": "prettier --write --config .prettierrc ./src/*.ts",
-    "start": "node ./dist/index",
-    "watch": "tsc --watch -p ./src "
+    "precommit": "prettier --write --config .prettierrc ./src/*.js",
+    "start": "node ./dist/index"
   },
   "dependencies": {
     "axios": "^0.18.0",

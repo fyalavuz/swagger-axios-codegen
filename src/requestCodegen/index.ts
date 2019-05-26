@@ -36,7 +36,6 @@ export function requestCodegen(paths: IPaths): IRequestClass {
         requestClasses[className] = []
       }
       let parameters = ''
-      let handleNullParameters = ''
       let parsedParameters: any = {}
       if (reqProps.parameters) {
         // 获取到接口的参数
@@ -44,9 +43,7 @@ export function requestCodegen(paths: IPaths): IRequestClass {
 
         parameters =
           parsedParameters.requestParameters.length > 0
-            ? `params: {
-              ${parsedParameters.requestParameters}
-          } = {} as any,`
+            ? `params = {},`
             : ''
 
         formData = parsedParameters.requestFormData ? 'data = new FormData();\n' + parsedParameters.requestFormData : ''
