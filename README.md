@@ -112,16 +112,25 @@ await UserService.GetAll();
 
 ### use custom axios.instance
 
-```js
-import axios from 'axios'
-import { serviceOptions } from './service'
-const instance = axios.create({
-  baseURL: 'https://some-domain.com/api/',
-  timeout: 1000,
-  headers: {'X-Custom-Header': 'foobar'}
-});
+Create a service/index.js than export your generated service file with custom axios instance
 
-serviceOptions.axios = instance
+```js
+//services/index.js
+import axios from 'axios'
+import { ProductService } from './generated/Product'
+
+const getAxiosInstance = serviceKey => {
+  return axios.create({
+    baseURL: process.env[`API_END_POINT_${serviceKey}`],
+    timeout: 1000,
+    headers: { 'X-Custom-Header': 'foobar' },
+  });
+};
+
+ProductService.axios = getAxiosInstance('PRODUCT');
+
+export { ProductService };
+
 
 ```
 
