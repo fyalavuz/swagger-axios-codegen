@@ -1,4 +1,4 @@
-# swagger-axios-codegen
+# swagger-axios-codegen-es6
 A swagger client uses axios and es6
 
 ￼[![NpmVersion](https://img.shields.io/npm/v/swagger-axios-codegen.svg)](https://www.npmjs.com/package/swagger-axios-codegen)
