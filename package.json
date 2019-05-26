@@ -1,18 +1,18 @@
 {
-  "name": "swagger-axios-codegen",
+  "name": "swagger-axios-codegen-es6",
   "version": "0.5.6",
   "main": "./dist/index",
   "typings": "./dist/",
-  "author": "Manwei Leung <mic.liangwenwei@foxmail.com>",
+  "author": "Fırat Yalavuz <yalavuz@gmail.com>",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/Manweill/swagger-axios-codegen.git",
+    "url": "https://github.com/fyalavuz/swagger-axios-codegen-es6.git",
     "type": "git"
   },
   "keywords": [
     "swagger",
     "axios",
-    "typescript",
+    "es6",
     "generator",
     "codegen"
   ],
