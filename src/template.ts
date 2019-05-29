@@ -76,12 +76,9 @@ ${options.useStaticMethod ? 'static' : ''} ${camelcase(name)}(${parameters}optio
       ? 'configs.params = {' + queryParameters.join(',') + '}'
       : ''
     }
-    let data = ${parsedParameters && bodyParameters.length > 0
-      ? '{' + bodyParameters.join(',') + '}'
-      : 'null'
-    }
+
     ${contentType === 'multipart/form-data' ? formData : ''}
-    configs.data = data;
+    configs.data = ${parsedParameters && bodyParameters.length > 0 ? 'params' : 'null'};
 
     this.axios(configs).then(res => {
       resolve(res.data);
